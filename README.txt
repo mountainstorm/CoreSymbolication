@@ -1,4 +1,5 @@
-CoreSymbolication -----------------
+CoreSymbolication
+-----------------
 
 Here are the reverse engineered headers for Apples CoreSymbolication private
 framework.
@@ -22,7 +23,10 @@ Enjoy!
 Rich
 
 
-License ------- Created by R J Cooper on 05/06/2012. This file: Copyright (c)
+License
+------- 
+
+Created by R J Cooper on 05/06/2012. This file: Copyright (c)
 2012 Mountainstorm API: Copyright (c) 2008 Apple Inc. All rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
