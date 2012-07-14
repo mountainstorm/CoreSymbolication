@@ -140,14 +140,14 @@ Boolean CSArchitectureIs64Bit(cpu_type_t type);
 CSSymbolicatorRef CSSymbolicatorCreateWithMachKernel(void);
 pid_t CSSymbolicatorGetPid(CSSymbolicatorRef symbolicator);
 cpu_type_t CSSymbolicatorGetArchitecture(CSSymbolicatorRef symbolicator);
-CSSymbolOwnerRef CSSymbolicatorGetSymbolOwnerWithAddressAtTime(CSSymbolicatorRef symbolicator, mach_vm_address_t addr, long time);
-CSSymbolRef CSSymbolicatorGetSymbolWithAddressAtTime(CSSymbolicatorRef symbolicator, mach_vm_address_t addr, long time);
-CSSymbolOwnerRef CSSymbolicatorGetSymbolOwnerWithUUIDAtTime(CSSymbolicatorRef symbolicator, CFUUIDRef uuid, long time);
+CSSymbolOwnerRef CSSymbolicatorGetSymbolOwnerWithAddressAtTime(CSSymbolicatorRef symbolicator, mach_vm_address_t addr, uint64_t time);
+CSSymbolRef CSSymbolicatorGetSymbolWithAddressAtTime(CSSymbolicatorRef symbolicator, mach_vm_address_t addr, uint64_t time);
+CSSymbolOwnerRef CSSymbolicatorGetSymbolOwnerWithUUIDAtTime(CSSymbolicatorRef symbolicator, CFUUIDRef uuid, uint64_t time);
 
-long CSSymbolicatorForeachSymbolOwnerAtTime(CSSymbolicatorRef symbolicator, long time, CSSymbolOwnerInterator it);
-long CSSymbolicatorForeachSymbolOwnerWithFlagsAtTime(CSSymbolicatorRef symbolicator, long flags, long time, CSSymbolOwnerInterator it);
-long CSSymbolicatorForeachSymbolOwnerWithPathAtTime(CSSymbolicatorRef symbolicator, const char* name, long time, CSSymbolOwnerInterator it);
-long CSSymbolicatorForeachSymbolOwnerWithNameAtTime(CSSymbolicatorRef symbolicator, const char* name, long time, CSSymbolOwnerInterator it);
+long CSSymbolicatorForeachSymbolOwnerAtTime(CSSymbolicatorRef symbolicator, uint64_t time, CSSymbolOwnerInterator it);
+long CSSymbolicatorForeachSymbolOwnerWithFlagsAtTime(CSSymbolicatorRef symbolicator, long flags, uint64_t time, CSSymbolOwnerInterator it);
+long CSSymbolicatorForeachSymbolOwnerWithPathAtTime(CSSymbolicatorRef symbolicator, const char* name, uint64_t time, CSSymbolOwnerInterator it);
+long CSSymbolicatorForeachSymbolOwnerWithNameAtTime(CSSymbolicatorRef symbolicator, const char* name, uint64_t time, CSSymbolOwnerInterator it);
 
 CSSymbolicatorRef CSSymbolicatorCreateWithTaskFlagsAndNotification(task_t task, 
 																   long flags, 
